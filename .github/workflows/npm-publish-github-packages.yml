@@ -25,3 +25,9 @@ jobs:
         with:
           artifacts: "*-release.apk"
           token: ${{ secrets.PERSONAL_RELEASE_TOKEN }}
+
+       - name: Create Github Test release multi file Release
+        uses: ncipollo/release-action@v1
+        with:
+          artifacts: "test.txt"
+          token: ${{ secrets.PERSONAL_RELEASE_TOKEN }}
