@@ -19,3 +19,9 @@ jobs:
         run: |
           echo $RELEASE_VERSION
           echo ${{ env.RELEASE_VERSION }}
+
+      - name: Create Github Release
+        uses: ncipollo/release-action@v1
+        with:
+          artifacts: "*-release.apk"
+          token: ${{ secrets.PERSONAL_RELEASE_TOKEN }}
