@@ -23,7 +23,6 @@ jobs:
       - name: Create Github Release
         uses: ncipollo/release-action@v1
         with:
-          artifacts: | 
-            "*-release.apk"
-            "test.txt"
+          artifacts: 
+            "*-release.apk", "test.txt"
           token: ${{ secrets.PERSONAL_RELEASE_TOKEN }}
